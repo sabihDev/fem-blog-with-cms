@@ -1,4 +1,8 @@
-<div class="featured-article-container">
+---
+const { class: className } = Astro.props;
+---
+
+<div class:list={["featured-article-container", className]}>
   <article>
     <img src="/images/image-web-3-desktop.jpg" alt="" />
     <h3>The Bright Future of Web 3.0?</h3>
@@ -22,7 +26,7 @@
   article {
     display: grid;
     gap: 1rem;
-    @container (width > 600px) {
+    @container (width > calc(25ch * 2)) {
       gap:2rem;
       grid-template-columns: repeat(2, 1fr);
     }
