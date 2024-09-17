@@ -1,0 +1,40 @@
+<div class="featured-article-container">
+  <article>
+    <img src="/images/image-web-3-desktop.jpg" alt="" />
+    <h3>The Bright Future of Web 3.0?</h3>
+
+    <div class="flow">
+      <p>
+        We dive into the next evolution of the web that claims to put the power
+        of the platforms back into the hands of the people. But is it really
+        fulfilling its promise?
+      </p>
+      <a href="#" class="button">Read more</a>
+    </div>
+  </article>
+</div>
+
+<style>
+  .featured-article-container {
+    container-type: inline-size;
+  }
+
+  article {
+    display: grid;
+    gap: 1rem;
+    @container (width > 600px) {
+      gap:2rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  img {
+    grid-column: 1/-1;
+  }
+
+  h3 {
+    margin: 0;
+    padding: 0;
+    font-size: var(--fs-900);
+  }
+</style>
